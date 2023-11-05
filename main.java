@@ -118,7 +118,7 @@ public class main {
 
         for(int i=0;i<PassengerGroup.pg.size();i++){
             if(PassengerGroup.pg.get(i).id == id ){//&& PassengerGroup.pg.get(i).password == password){
-                System.out.println("Login successful");
+                System.out.println("Login successful welcome " + PassengerGroup.pg.get(i).name + " to Airline Reservation System");
                 return id;
             }
         }
@@ -132,6 +132,7 @@ public class main {
         for(int i=0;i<FlightGroup.fl.size();i++){
             if(FlightGroup.fl.get(i).number == number){
                 FlightGroup.fl.get(i).seat[id] = 1;
+                System.out.println("Booking successful on flight number " + number + " for passenger id " + id+ " from " + FlightGroup.fl.get(i).starting + " to " + FlightGroup.fl.get(i).destination);
                 return 1;
             }
         }
@@ -141,11 +142,13 @@ public class main {
     void addPassengers(){
         PassengerGroup pg = new PassengerGroup();
         pg.addPassengers();
+        System.out.println("Passenger added");
     }
 
     void addFlights(){
         FlightGroup fg = new FlightGroup();
         fg.addFlight();
+        System.out.println("Flight added");
     }
 
     void getFlights(){
