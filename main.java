@@ -48,14 +48,14 @@ class FlightGroup{
 
     void displayFlights(){
         for(int i=0;i<fl.size();i++){
-            System.out.println(fl.get(i));
+            System.out.println(fl.get(i).starting + " " + fl.get(i).destination);
         }
     }
 
     void displayFligtsfrom(String starting){
         for(int i=0;i<fl.size();i++){
             if(fl.get(i).starting == starting){
-                System.out.println(fl.get(i));
+                System.out.println(fl.get(i).destination);
             }
         }
     }
@@ -63,7 +63,7 @@ class FlightGroup{
     void displayFlightsTo(String destination){
         for(int i=0;i<fl.size();i++){
             if(fl.get(i).destination == destination){
-                System.out.println(fl.get(i));
+                System.out.println(fl.get(i).starting);
             }
         }
     }
@@ -249,6 +249,7 @@ public class main {
                         System.out.println("4. Get flight to");
                         System.out.println("5. Exit");
                         ch1 = sc.nextInt();
+                        sc.nextLine();
                         if(ch1 == 1){
                             m.book(id);
                         }
