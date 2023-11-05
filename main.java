@@ -251,7 +251,7 @@ public class main {
                         System.out.println("2. Get flights");
                         // System.out.println("3. Get flight from");
                         // System.out.println("4. Get flight to");
-                        System.out.println("5. Exit");
+                        System.out.println("3. Exit");
                         ch1 = sc.nextInt();
                         sc.nextLine();
                         if(ch1 == 1){
