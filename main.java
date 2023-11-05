@@ -48,7 +48,7 @@ class FlightGroup{
 
     void displayFlights(){
         for(int i=0;i<fl.size();i++){
-            System.out.println(fl.get(i).starting + " " + fl.get(i).destination);
+            System.out.println(fl.get(i).starting + "-> " + fl.get(i).destination);
         }
     }
 
