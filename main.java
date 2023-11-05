@@ -189,14 +189,14 @@ public class main {
                 System.out.println("enter password");
                 String password = sc.nextLine();
                 int ch1;
-                while(ch != 7){
+                while(ch != 5){
                     System.out.println("1. Add flight");
                     System.out.println("2. Get flights");
                     System.out.println("3. Add passenger");
                     System.out.println("4. Get passengers");
-                    System.out.println("5. Get flights from");
-                    System.out.println("6. Get flights to");
-                    System.out.println("7. Exit");
+                    // System.out.println("5. Get flights from");
+                    // System.out.println("6. Get flights to");
+                    System.out.println("5. Exit");
                     ch1 = sc.nextInt();
                     if(ch1 == 1){
                         main m = new main();
@@ -214,19 +214,20 @@ public class main {
                         main m = new main();
                         m.getPassengers();
                     }
+                    // else if(ch1 == 5){
+                    //     main m = new main();
+                    //     System.out.println("Enter starting point");
+                    //     String starting = sc.nextLine();
+                    //     starting = sc.nextLine();
+                    //     m.getFlightsFrom(starting);
+                    // }
+                    // else if(ch1 == 6){
+                    //     main m = new main();
+                    //     System.out.println("Enter destination");
+                    //     String destination = sc.nextLine();
+                    //     m.getFlightsTo(destination);
+                    //}
                     else if(ch1 == 5){
-                        main m = new main();
-                        System.out.println("Enter starting point");
-                        String starting = sc.nextLine();
-                        m.getFlightsFrom(starting);
-                    }
-                    else if(ch1 == 6){
-                        main m = new main();
-                        System.out.println("Enter destination");
-                        String destination = sc.nextLine();
-                        m.getFlightsTo(destination);
-                    }
-                    else if(ch1 == 7){
                         break;
                     }
                     else{
@@ -242,11 +243,11 @@ public class main {
                 int id = m.login();
                 if(id != -1){
                     int ch1 =-1;
-                    while(ch1 != 5){
+                    while(ch1 != 3){
                         System.out.println("1. Book flight");
                         System.out.println("2. Get flights");
-                        System.out.println("3. Get flight from");
-                        System.out.println("4. Get flight to");
+                        // System.out.println("3. Get flight from");
+                        // System.out.println("4. Get flight to");
                         System.out.println("5. Exit");
                         ch1 = sc.nextInt();
                         sc.nextLine();
@@ -256,17 +257,17 @@ public class main {
                         else if(ch1 == 2){
                             m.getFlights();
                         }
+                        // else if(ch1 == 3){
+                        //     System.out.println("Enter starting point");
+                        //     String starting = sc.nextLine();
+                        //     m.getFlightsFrom(starting);
+                        // }
+                        // else if(ch1 == 4){
+                        //     System.out.println("Enter destination");
+                        //     String destination = sc.nextLine();
+                        //     m.getFlightsTo(destination);
+                        // }
                         else if(ch1 == 3){
-                            System.out.println("Enter starting point");
-                            String starting = sc.nextLine();
-                            m.getFlightsFrom(starting);
-                        }
-                        else if(ch1 == 4){
-                            System.out.println("Enter destination");
-                            String destination = sc.nextLine();
-                            m.getFlightsTo(destination);
-                        }
-                        else if(ch1 == 5){
                             break;
                         }
                         else{
